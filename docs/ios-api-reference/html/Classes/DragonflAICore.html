@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DragonflAICore Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/DragonflAICore" class="dashAnchor"></a>
+    <a title="DragonflAICore Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <img src="../img/DragonflAI white no word.png"/> 
+          <a href="../index.html">DragonflAI 1.5 Docs</a>
+          <!--  (100% documented) -->
+        </p>
+        <p class="header-right">
+          <!-- <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form> -->
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">DragonflAI Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DragonflAICore Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DragonflAICore.html">DragonflAICore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Moderator.html">Moderator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StreamModerator.html">StreamModerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StreamModerator/NewResultStrategy.html">– NewResultStrategy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Algorithm.html">Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Decision.html">Decision</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Decision/Category.html">– Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LicenseMode.html">LicenseMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LicenseStatus.html">LicenseStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LogLevel.html">LogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ModeratorError.html">ModeratorError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDKError.html">SDKError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification.html">NSNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification/Name.html">– Name</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Logging.html">Logging</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/StreamModeratorDelegate.html">StreamModeratorDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Account.html">Account</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AlgorithmConfig.html">AlgorithmConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Analysis.html">Analysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ConsoleLogger.html">ConsoleLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Inference.html">Inference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Meta.html">Meta</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ModeratorSuccess.html">ModeratorSuccess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NullLogger.html">NullLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10DragonflAI15ModeratorResulta">ModeratorResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DragonflAICore</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">DragonflAICore</span> <span class="p">:</span> <span class="kt">LicenseProviding</span></code></pre>
+
+                </div>
+              </div>
+            <p>DragonflAICore manages central API functions.</p>
+
+<p>It is important that you set the account details before using any DragonflAI classes.
+ E.g.</p>
+<pre class="highlight swift"><code> <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">willFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+     <span class="kt">DragonflAI</span><span class="o">.</span><span class="kt">SDK</span><span class="o">.</span><span class="nf">setAccount</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+     <span class="k">return</span> <span class="kc">true</span>
+ <span class="p">}</span>
+</code></pre>
+
+<p>The <code><a href="../Protocols/Logging.html">Logging</a></code> provider for the whole SDK may be set on this class, overriding the default console logger.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI0A6AICoreC6statusAA13LicenseStatusOvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/status" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI0A6AICoreC6statusAA13LicenseStatusOvpZ">status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides the current license status of the SDK</p>
+
+<p>Observe <code><a href="../Extensions/NSNotification/Name.html#/s:So18NSNotificationNamea10DragonflAIE39co_dragonflai_statusUpdatedNotificationABvpZ">NSNotification.Name.co_dragonflai_statusUpdatedNotification</a></code> for changes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../Enums/LicenseStatus.html">LicenseStatus</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI0A6AICoreC10useAccountyyAA0E0VFZ"></a>
+                    <a name="//apple_ref/swift/Method/useAccount(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI0A6AICoreC10useAccountyyAA0E0VFZ">useAccount(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the account details used for licensing checks</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">useAccount</span><span class="p">(</span><span class="n">_</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Structs/Account.html">Account</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI0A6AICoreC9useLoggeryyAA7Logging_pSgFZ"></a>
+                    <a name="//apple_ref/swift/Method/useLogger(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI0A6AICoreC9useLoggeryyAA7Logging_pSgFZ">useLogger(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the logger used for the whole SDK.</p>
+
+<p>The provided <code><a href="../Structs/ConsoleLogger.html">ConsoleLogger</a></code> struct simply wraps NSLog.
+Provide a custom implementation of <code><a href="../Protocols/Logging.html">Logging</a></code> to handle logs, e.g. pass them to your app&rsquo;s log provider.</p>
+
+<p>Default: <code><a href="../Structs/ConsoleLogger.html">ConsoleLogger</a></code> with <code>logLevel</code> = <code>.warn</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">useLogger</span><span class="p">(</span><span class="n">_</span> <span class="nv">logger</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Logging.html">Logging</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI0A6AICoreC9useLogger6loggeryAA7Logging_pSg_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/useLogger(logger:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI0A6AICoreC9useLogger6loggeryAA7Logging_pSg_tFZ">useLogger(logger:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the logger used for the whole SDK.</p>
+
+<p><em>Deprecated</em>: use <code>useLogger(_ logger: Logging?)</code> instead.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">useLogger</span><span class="p">(</span><span class="nv">logger</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Logging.html">Logging</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI0A6AICoreC9useUserIDyySSSgFZ"></a>
+                    <a name="//apple_ref/swift/Method/useUserID(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI0A6AICoreC9useUserIDyySSSgFZ">useUserID(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set a unique user ID for licensing purposes. Optional.</p>
+
+<p>This ID will be used for licensing until changed or reset to <code>nil</code>, persisting across restarts of your app.</p>
+
+<p>If using this option, you may also want to call <code>useLicenseMode(.customerUserID)</code> during initialisation.
+This will delay licensing checks (and hence use of the SDK) until after the UserID is set, ensuring only identified
+users are counted for licensing purposes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">useUserID</span><span class="p">(</span><span class="n">_</span> <span class="nv">userID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI0A6AICoreC11sendMetrics15moderationTallyySb_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/sendMetrics(moderationTally:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI0A6AICoreC11sendMetrics15moderationTallyySb_tFZ">sendMetrics(moderationTally:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Opt into sending metrics to DragonflAI. Default is false, meaning no metrics are sent.</p>
+
+<p>Moderation tally sends total counts of image categories seen by the moderator.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sendMetrics</span><span class="p">(</span><span class="nv">moderationTally</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI0A6AICoreC14useLicenseModeyyAA0eF0OFZ"></a>
+                    <a name="//apple_ref/swift/Method/useLicenseMode(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI0A6AICoreC14useLicenseModeyyAA0eF0OFZ">useLicenseMode(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the license checking strategy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">useLicenseMode</span><span class="p">(</span><span class="n">_</span> <span class="nv">licenseMode</span><span class="p">:</span> <span class="kt"><a href="../Enums/LicenseMode.html">LicenseMode</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI0A6AICoreC7versionSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI0A6AICoreC7versionSSvpZ">version</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SDK semantic version</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI0A6AICoreC11buildNumberSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/buildNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI0A6AICoreC11buildNumberSSvpZ">buildNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>SDK build number</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">buildNumber</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2021 <a class="link" href="https://dragonflai.co" target="_blank" rel="external">CensorPic LTD</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

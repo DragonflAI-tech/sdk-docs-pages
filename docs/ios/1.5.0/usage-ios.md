@@ -1,0 +1,213 @@
+---
+layout: default
+title: iDragonflAI SDK usage
+parent: iOS documentation v1.5.0
+---
+# DragonflAI SDK for iOS
+
+## Usage
+
+### Initialising
+
+#### Account
+
+DragonflAI is a commercial product and requires licensing details during framework initialization. This should have been provided alongside this documentation, but if not please contact <mailto:support@dragonflai.co>.
+
+Initialise early in your app's startup. 
+For example here in the `AppDelegate` method `application:willFinishLaunchingWithOptions:`, we call [`useAccount()`](../1.5/api-reference/Classes/DragonflAICore.html) with our license details. 
+
+
+```swift
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // To see debug log messages, pass a debug logger.
+        // NB: limit use to debug builds 
+        DragonflAICore.useLogger(logger: ConsoleLogger(logLevel: .debug))
+        
+        let account = Account(key: "your_key", secret: "your_secret")        
+        DragonflAICore.useAccount(account)
+        
+        return true
+    }
+}
+```
+
+This is a basic example. You may wish to keep your credentials in config rather than code.
+
+#### License mode
+
+##### Standard
+
+The DragonflAI SDK can be used out of the box to moderate, and in the default `.standard` mode it will use a unique ID per app install for licensing purposes. This is generated and maintained internally.
+
+This strategy will opportunistically check the licensing server, if required, as early as possible. It aims to avoid running licensing checks during SDK use, i.e. avoiding delays to user initiated actions.
+
+##### CustomerUserID
+
+If you wish to link licensing user counts more closely to your users:
+ - During initialisation, set the appropriate license mode i.e. `DragonflAICore.useLicenseMode(.customerUserID)`, *before* calling `useAccount()`. This will prevent licensing checks (and hence use of the SDK) until a user ID is provided.
+ - When you have a unique ID for your user, e.g. following login, provide it to the SDK `DragonflAICore.useUserID($yourUniqueString$)`. This ID will be used for licensing until changed or reset to `nil`, persisting across restarts of your app.
+
+#### Sending metrics
+
+If you wish to participate in our metrics collection, to better understand the customer experience and help development of our algorithms, please get in touch so we can discuss the details, at <mailto:support@dragonflai.co>.
+
+To send metrics, you need to opt in via the SDK: `DragonflAICore.sendMetrics(moderationTally: true)`. The default behaviour is not to send any metrics to the server.
+
+
+### Moderating an image
+
+Create a [`Moderator`](../1.5/api-reference/Classes/Moderator.html) instance, and pass an image to `moderate()`.
+
+##### Basic example using a closure to handle the result:
+
+
+```swift
+let image: UIImage = [your choice of image]
+
+Moderator(algorithm: .nudity1).moderate(image) { (moderationResult) in
+            
+    // *** update model in background thread ***
+
+    // *** example of expanding result ***
+    switch moderationResult {
+    case .success(let success):
+        switch success.analysis.decision {
+        case .ok:
+            // moderator allowed this image
+        case .blocked:
+            // moderator blocked this image
+        @unknown default:
+            // this covers any future return types 
+        }
+    case .failure(let error):
+        // moderation error
+    }
+    
+    DispatchQueue.main.async {
+        // *** update UI in main thread ***
+    }
+}
+```
+
+⚠️ You should assume the closure is **not** called on the main queue, and dispatch UI updates accordingly.
+
+##### Configuring a moderator
+
+You may want to configure and reuse a [`Moderator`](../1.5/api-reference/Classes/Moderator.html) instance instead of creating it every time.
+
+It can take an optional [AlgorithmConfig](../1.5/api-reference/Structs/AlgorithmConfig.html) object if you don't want to use the defaults.
+
+```swift
+let config = AlgorithmConfig(blockThreshold: 50)
+let moderator = Moderator(algorithm: .nudity1, config: config)
+
+// ...
+
+moderator.moderate(image) { (moderationResult) in 
+    // use result
+}
+```
+
+##### Promises (PromiseKit)
+
+You can also get the results via PromiseKit promises.
+
+```swift
+moderator?.moderate(image)
+    .map { (success: ModeratorSuccess) in
+        // use analysis and metadata
+    }
+    .catch { error in
+        // handle error
+    }
+```
+
+### Moderating a video stream
+
+Streams of images can also be moderated in v1.4+. Typically these come from the device cameras and are passed to a codec for streaming or real-time communication.
+
+##### Creating a StreamModerator
+
+Get a [`StreamModerator`](../1.5/api-reference/Classes/StreamModerator.html) by asking a [`Moderator`](../1.5/api-reference/Classes/Moderator.html) to `createStreamModerator()`
+
+```swift
+class MyClass {
+    private var streamModerator: StreamModerator?
+
+    init() {
+        let moderator = Moderator(algorithm: .nudity1)
+        streamModerator = moderator.createStreamModerator()
+        streamModerator?.delegate = self    
+    }
+}
+```
+
+##### Supplying stream frames
+
+Pass the frames, e.g. from the camera, to the `process(frame:)` method.
+
+```swift
+extension MyClass: AVCaptureVideoDataOutputSampleBufferDelegate {    
+  func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+
+    let pixelBuffer: CVPixelBuffer? = CMSampleBufferGetImageBuffer(sampleBuffer)
+
+    guard let pixelBuffer = pixelBuffer else {
+      return
+    }
+
+    streamModerator?.process(frame: pixelBuffer)
+
+    // pass pixelBuffer to codec (dependent on moderation result) 
+  }
+
+}
+```
+
+##### Getting results
+
+To get results, assign a delegate, typically the same class.
+
+```swift
+extension MyClass: StreamModeratorDelegate {
+    func moderatorDidProduceNewResult(_ moderator: StreamModerator,
+                                      result moderationResult: ModeratorResult) {
+        
+        guard moderator == self.streamModerator else {
+            return
+        }
+
+        // use moderationResult
+    }
+
+    func moderatorDidDropFrame(_ moderator: StreamModerator) {
+        // dropped frame
+    }
+}
+```
+
+##### Getting stream statistics
+
+The [`StreamModerator`](../1.5/api-reference/Classes/StreamModerator.html) can provide statistics on the number of frames it is receiving and processing.
+
+```swift
+func printStats() {
+    print("Input FPS: \(streamModerator.inputFramesPerSecond) / Processed FPS: \(moderator.processedFramesPerSecond)")
+}
+```
+
+For consistent results, reset those stats when starting or resuming a session, so periods with no frames are not included.
+
+```swift
+func startVideoSession() {
+    // ...
+
+    streamModerator?.resetFPSStats()
+
+    // ...
+}
+```
+

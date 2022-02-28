@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Moderator Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Moderator" class="dashAnchor"></a>
+    <a title="Moderator Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <img src="../img/DragonflAI white no word.png"/> 
+          <a href="../index.html">DragonflAI 1.5 Docs</a>
+          <!--  (100% documented) -->
+        </p>
+        <p class="header-right">
+          <!-- <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form> -->
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">DragonflAI Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Moderator Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DragonflAICore.html">DragonflAICore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Moderator.html">Moderator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StreamModerator.html">StreamModerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StreamModerator/NewResultStrategy.html">– NewResultStrategy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Algorithm.html">Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Decision.html">Decision</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Decision/Category.html">– Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LicenseMode.html">LicenseMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LicenseStatus.html">LicenseStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LogLevel.html">LogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ModeratorError.html">ModeratorError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SDKError.html">SDKError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification.html">NSNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification/Name.html">– Name</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Logging.html">Logging</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/StreamModeratorDelegate.html">StreamModeratorDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Account.html">Account</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AlgorithmConfig.html">AlgorithmConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Analysis.html">Analysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ConsoleLogger.html">ConsoleLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Inference.html">Inference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Meta.html">Meta</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ModeratorSuccess.html">ModeratorSuccess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NullLogger.html">NullLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10DragonflAI15ModeratorResulta">ModeratorResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Moderator</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Moderator</span></code></pre>
+
+                </div>
+              </div>
+            <h1 id='moderator' class='heading'>Moderator</h1>
+
+<p>Pass images to a moderator to get a verdict on the image content.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI9ModeratorC6configAcA15AlgorithmConfigVSg_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(config:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI9ModeratorC6configAcA15AlgorithmConfigVSg_tcfc">init(config:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Make a moderator for images — uses <code>nudity1</code> algorithm.
+Provided for compatibility with SDK lower than 1.4</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/AlgorithmConfig.html">AlgorithmConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(optional) configuration to override algorithm defaults</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI9ModeratorC9algorithm6configAcA9AlgorithmO_AA0F6ConfigVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(algorithm:config:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI9ModeratorC9algorithm6configAcA9AlgorithmO_AA0F6ConfigVSgtcfc">init(algorithm:<wbr>config:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Make a moderator for images</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">algorithm</span><span class="p">:</span> <span class="kt"><a href="../Enums/Algorithm.html">Algorithm</a></span><span class="p">,</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Structs/AlgorithmConfig.html">AlgorithmConfig</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>algorithm</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the algorithm to use for moderation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(optional) configuration to override algorithm defaults</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI9ModeratorC012createStreamC014resultStrategyAA0eC0CAG09NewResultG0O_tF"></a>
+                    <a name="//apple_ref/swift/Method/createStreamModerator(resultStrategy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI9ModeratorC012createStreamC014resultStrategyAA0eC0CAG09NewResultG0O_tF">createStreamModerator(resultStrategy:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a <code><a href="../Classes/StreamModerator.html">StreamModerator</a></code> that uses this moderator.</p>
+
+<p>Set the <code><a href="../Protocols/StreamModeratorDelegate.html">StreamModeratorDelegate</a></code> to consume its results.</p>
+
+<p>Optionally takes a <code>NewResultStrategy</code> to control what the delegate is informed about.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createStreamModerator</span><span class="p">(</span><span class="nv">resultStrategy</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamModerator.html">StreamModerator</a></span><span class="o">.</span><span class="kt">NewResultStrategy</span> <span class="o">=</span> <span class="o">.</span><span class="n">decisionChanged</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/StreamModerator.html">StreamModerator</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI9ModeratorC8moderate_9completedySo7UIImageC_ys6ResultOyAA0C7SuccessVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/moderate(_:completed:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI9ModeratorC8moderate_9completedySo7UIImageC_ys6ResultOyAA0C7SuccessVs5Error_pGctF">moderate(_:<wbr>completed:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get a moderation decision <code>Result</code> (via closure) for an individual <code>UIImage</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">moderate</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span> <span class="nv">completed</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10DragonflAI15ModeratorResulta">ModeratorResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the input image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completed</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>callback with result. <strong>Assume this is <em>not</em> on the main queue.</strong> You should schedule resulting UI updates on the main thread.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Result</code> type containing <code><a href="../Structs/Analysis.html">Analysis</a></code> or <code><a href="../Enums/ModeratorError.html">ModeratorError</a></code> | <code><a href="../Enums/SDKError.html">SDKError</a></code> | <code>Error</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI9ModeratorC8moderatey10PromiseKit0E0CyAA0C7SuccessVGSo7UIImageCF"></a>
+                    <a name="//apple_ref/swift/Method/moderate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI9ModeratorC8moderatey10PromiseKit0E0CyAA0C7SuccessVGSo7UIImageCF">moderate(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get a moderation decision for an individual <code>UIImage</code> as a Promise.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">moderate</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ModeratorSuccess.html">ModeratorSuccess</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the input image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Promise</code>  containing <code><a href="../Structs/ModeratorSuccess.html">ModeratorSuccess</a></code> or <code><a href="../Enums/ModeratorError.html">ModeratorError</a></code> | <code><a href="../Enums/SDKError.html">SDKError</a></code> | <code>Error</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI9ModeratorC8moderatey10PromiseKit0E0CyAA8AnalysisVGSo7UIImageCF"></a>
+                    <a name="//apple_ref/swift/Method/moderate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI9ModeratorC8moderatey10PromiseKit0E0CyAA8AnalysisVGSo7UIImageCF">moderate(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get a moderation decision for an individual <code>UIImage</code> as a Promise.</p>
+
+<p><em>Deprecated</em>: use <code>moderate(_ image: UIImage) -&gt; Promise&lt;ModeratorSuccess&gt;</code> instead.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">moderate</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/Analysis.html">Analysis</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the input image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Promise</code>  containing <code><a href="../Structs/Analysis.html">Analysis</a></code> or <code><a href="../Enums/ModeratorError.html">ModeratorError</a></code> | <code><a href="../Enums/SDKError.html">SDKError</a></code> | <code>Error</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2021 <a class="link" href="https://dragonflai.co" target="_blank" rel="external">CensorPic LTD</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Structures  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
+    <a title="Structures  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <img src="img/DragonflAI white no word.png"/> 
+          <a href="index.html">DragonflAI 1.5 Docs</a>
+          <!--  (100% documented) -->
+        </p>
+        <p class="header-right">
+          <!-- <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form> -->
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">DragonflAI Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Structures  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/DragonflAICore.html">DragonflAICore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Moderator.html">Moderator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/StreamModerator.html">StreamModerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/StreamModerator/NewResultStrategy.html">– NewResultStrategy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/Algorithm.html">Algorithm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Decision.html">Decision</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Decision/Category.html">– Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LicenseMode.html">LicenseMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LicenseStatus.html">LicenseStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LogLevel.html">LogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ModeratorError.html">ModeratorError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SDKError.html">SDKError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/NSNotification.html">NSNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSNotification/Name.html">– Name</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Logging.html">Logging</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/StreamModeratorDelegate.html">StreamModeratorDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Account.html">Account</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AlgorithmConfig.html">AlgorithmConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Analysis.html">Analysis</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ConsoleLogger.html">ConsoleLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Inference.html">Inference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Meta.html">Meta</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ModeratorSuccess.html">ModeratorSuccess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/NullLogger.html">NullLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10DragonflAI15ModeratorResulta">ModeratorResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI7AccountV"></a>
+                    <a name="//apple_ref/swift/Struct/Account" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI7AccountV">Account</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents your customer account as an SDK user</p>
+
+                        <a href="Structs/Account.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Account</span> <span class="p">:</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Account</span><span class="p">:</span> <span class="kt">Codable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Account</span><span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI15AlgorithmConfigV"></a>
+                    <a name="//apple_ref/swift/Struct/AlgorithmConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI15AlgorithmConfigV">AlgorithmConfig</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>User configuration for an <code><a href="Enums/Algorithm.html">Algorithm</a></code> where needed.</p>
+
+<p>Not all config fields are applicable to all algorithms. Supplied and applicable config will override the defaults.</p>
+
+                        <a href="Structs/AlgorithmConfig.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AlgorithmConfig</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI8AnalysisV"></a>
+                    <a name="//apple_ref/swift/Struct/Analysis" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI8AnalysisV">Analysis</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Moderation output data</p>
+
+                        <a href="Structs/Analysis.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Analysis</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI9InferenceV"></a>
+                    <a name="//apple_ref/swift/Struct/Inference" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI9InferenceV">Inference</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An individual inference</p>
+
+                        <a href="Structs/Inference.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Inference</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI16ModeratorSuccessV"></a>
+                    <a name="//apple_ref/swift/Struct/ModeratorSuccess" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI16ModeratorSuccessV">ModeratorSuccess</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The output from successful moderation.</p>
+
+                        <a href="Structs/ModeratorSuccess.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ModeratorSuccess</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI4MetaV"></a>
+                    <a name="//apple_ref/swift/Struct/Meta" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI4MetaV">Meta</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Moderation performance data</p>
+
+                        <a href="Structs/Meta.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Meta</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI13ConsoleLoggerV"></a>
+                    <a name="//apple_ref/swift/Struct/ConsoleLogger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI13ConsoleLoggerV">ConsoleLogger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A simple logger which wraps NSLog and may be initialised with any log level</p>
+
+                        <a href="Structs/ConsoleLogger.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ConsoleLogger</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Logging.html">Logging</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DragonflAI10NullLoggerV"></a>
+                    <a name="//apple_ref/swift/Struct/NullLogger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DragonflAI10NullLoggerV">NullLogger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A very simple logger to null. Allows logging to be completely disabled.</p>
+
+                        <a href="Structs/NullLogger.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NullLogger</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Logging.html">Logging</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2021 <a class="link" href="https://dragonflai.co" target="_blank" rel="external">CensorPic LTD</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
