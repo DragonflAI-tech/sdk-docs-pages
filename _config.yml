@@ -9,6 +9,6 @@ url: https://dragonflai-sdk-docs.github.io  # the base hostname and protocol for
 baseurl: /
 
 # Build settings
-theme: "just-the-docs"
+remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
